@@ -1,0 +1,61 @@
+[
+    {
+      "name": "John Smith",
+      "image": "john_smith.jpg",
+      "email": "john.smith@example.com",
+      "numClasses": 2,
+      "classes": [
+        "Ballet",
+        "Contemporary Dance"
+      ]
+    },
+    {
+      "name": "Emily Johnson",
+      "image": "emily_johnson.jpg",
+      "email": "emily.johnson@example.com",
+      "numClasses": 3,
+      "classes": [
+        "Hip Hop",
+        "Jazz Dance",
+        "Tap Dance"
+      ]
+    },
+    {
+      "name": "Michael Davis",
+      "image": "michael_davis.jpg",
+      "email": "michael.davis@example.com",
+      "numClasses": 1,
+      "classes": [
+        "Latin Dance"
+      ]
+    },
+    {
+      "name": "Sophia Anderson",
+      "image": "sophia_anderson.jpg",
+      "email": "sophia.anderson@example.com",
+      "numClasses": 2,
+      "classes": [
+        "Salsa Dance",
+        "Ballroom Dance"
+      ]
+    },
+    {
+      "name": "William Thompson",
+      "image": "william_thompson.jpg",
+      "email": "william.thompson@example.com",
+      "numClasses": 1,
+      "classes": [
+        "Breakdance"
+      ]
+    },
+    {
+      "name": "Olivia Wilson",
+      "image": "olivia_wilson.jpg",
+      "email": "olivia.wilson@example.com",
+      "numClasses": 2,
+      "classes": [
+        "Aerial Dance",
+        "Flamenco Dance"
+      ]
+    }
+  ]
