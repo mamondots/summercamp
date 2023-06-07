@@ -1,0 +1,74 @@
+[
+    {
+      "name": "Summer Dance Camp",
+      "image": "https://example.com/camp_image.jpg",
+      "available_seats": 30,
+      "price": 199.99,
+      "instructor": {
+        "name": "Emily Johnson",
+        "email": "emily.johnson@example.com"
+      },
+      "schedule": "July 10 - July 15, 9:00 AM - 1:00 PM",
+      "location": "123 Main Street, Cityville"
+    },
+    {
+      "name": "Hip Hop Intensive",
+      "image": "https://example.com/hip_hop_image.jpg",
+      "available_seats": 15,
+      "price": 149.99,
+      "instructor": {
+        "name": "Michael Williams",
+        "email": "michael.williams@example.com"
+      },
+      "schedule": "August 5 - August 10, 2:00 PM - 6:00 PM",
+      "location": "456 Elm Street, Townsville"
+    },
+    {
+      "name": "Ballet Workshop",
+      "image": "https://example.com/ballet_image.jpg",
+      "available_seats": 20,
+      "price": 179.99,
+      "instructor": {
+        "name": "Sarah Thompson",
+        "email": "sarah.thompson@example.com"
+      },
+      "schedule": "June 20 - June 25, 10:00 AM - 2:00 PM",
+      "location": "789 Oak Avenue, Villageland"
+    },
+    {
+      "name": "Contemporary Dance Retreat",
+      "image": "https://example.com/contemporary_image.jpg",
+      "available_seats": 25,
+      "price": 249.99,
+      "instructor": {
+        "name": "David Garcia",
+        "email": "david.garcia@example.com"
+      },
+      "schedule": "August 20 - August 25, 9:00 AM - 1:00 PM",
+      "location": "321 Pine Lane, Hamletville"
+    },
+    {
+      "name": "Jazz Fusion Workshop",
+      "image": "https://example.com/jazz_image.jpg",
+      "available_seats": 10,
+      "price": 129.99,
+      "instructor": {
+        "name": "Sophia Lee",
+        "email": "sophia.lee@example.com"
+      },
+      "schedule": "July 5 - July 10, 3:00 PM - 7:00 PM",
+      "location": "654 Maple Road, Suburbia"
+    },
+    {
+      "name": "Latin Dance Fiesta",
+      "image": "https://example.com/latin_dance_image.jpg",
+      "available_seats": 18,
+      "price": 189.99,
+      "instructor": {
+        "name": "Carlos Rodriguez",
+        "email": "carlos.rodriguez@example.com"
+      },
+      "schedule": "June 15 - June 20, 1:00 PM - 5:00 PM",
+      "location": "987 Walnut Boulevard, Metropolis"
+    }
+  ]
