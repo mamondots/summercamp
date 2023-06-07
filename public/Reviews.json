@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Jane Doe",
+      "image": "jane_doe.jpg",
+      "rating": 4.5,
+      "details": "I had an amazing experience at the summer camp. The activities were diverse and engaging, and the counselors were friendly and supportive. The camp provided a safe and inclusive environment for all campers. I highly recommend it!"
+    },
+    {
+      "name": "John Smith",
+      "image": "john_smith.jpg",
+      "rating": 5.0,
+      "details": "This summer camp exceeded my expectations in every way. The staff was fantastic, the facilities were top-notch, and the range of activities was outstanding. My child had an unforgettable time and made lifelong friends. We can't wait to come back next year!"
+    },
+    {
+      "name": "Emily Johnson",
+      "image": "emily_johnson.jpg",
+      "rating": 4.0,
+      "details": "I had a great time at the summer camp. The counselors were attentive and created a fun atmosphere. The camp offered a good balance between educational and recreational activities. My only suggestion would be to include more outdoor excursions. Overall, it was a memorable experience!"
+    },
+    {
+      "name": "Michael Davis",
+      "image": "michael_davis.jpg",
+      "rating": 4.8,
+      "details": "The summer camp provided an excellent environment for learning and fun. The instructors were knowledgeable and enthusiastic, and the activities were well-organized. My child had a blast and learned new skills. We will definitely be back next summer!"
+    },
+    {
+      "name": "Sarah Thompson",
+      "image": "sarah_thompson.jpg",
+      "rating": 4.2,
+      "details": "My experience at the summer camp was overall positive. The facilities were clean and well-maintained, and the staff was friendly. The camp offered a good variety of activities, but I would have liked to see more options for indoor games during extreme weather. Nonetheless, it was an enjoyable experience."
+    },
+    {
+      "name": "David Wilson",
+      "image": "david_wilson.jpg",
+      "rating": 4.7,
+      "details": "I highly recommend this summer camp. The counselors were energetic and made the camp fun for everyone. The schedule was well-structured, with a good mix of sports, arts, and team-building activities. The camp also had excellent safety measures in place. My child had an incredible time!"
+    }
+  ]
