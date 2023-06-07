@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import userImg from '../../../assets/images/userImg.jpg'
 const Navbar = () => {
     const Navbar = <>
@@ -7,6 +8,7 @@ const Navbar = () => {
         <li className='text-lg font-medium'><a>Dashboard</a></li>
         
     </>
+    const user = true
     return (
         <div className="fixed w-full bg-white z-10 shadow-sm">
             <div className="py-4 border-b-[1px]">
@@ -29,7 +31,15 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <div className='w-8 rounded-full'>
-                    <img className='rounded-full' src={userImg} alt="" />
+                  {
+                      user? <>
+                      <li className='list-none'><Link to='/login'>Login</Link></li>
+                      </>:<>
+  
+                       
+                       <img className='rounded-full' src={userImg} alt="" />
+                      </>
+                  }
                 </div>
             </div>
         </div>
