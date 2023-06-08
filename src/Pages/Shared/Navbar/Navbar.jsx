@@ -1,14 +1,33 @@
 import { Link } from 'react-router-dom';
 import userImg from '../../../assets/images/userImg.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../../../Providers/AuthProvider';
 const Navbar = () => {
+
+    const {user,logOut} = useContext(AuthContext)
+
+    const handleLogOut = () =>{
+        logOut()
+        .then(() =>{})
+        .catch(err => console.log(err))
+    }
+
     const Navbar = <>
         <li className='text-lg font-medium'><a>Home</a></li>
         <li className='text-lg font-medium'><a>Instructors</a></li>
         <li className='text-lg font-medium'><a>Classes</a></li>
-        <li className='text-lg font-medium'><a>Dashboard</a></li>
+        {
+            user? 
+            <>
+            <li className='text-lg font-medium'><a>Dashboard</a></li>
+            </>
+            :<>
+            <li className='text-lg font-medium'><a></a></li>
+            </>
+        }
         
     </>
-    const user = true
+    
     return (
         <div className="fixed w-full bg-white z-10 shadow-sm">
             <div className="py-4 border-b-[1px]">
@@ -33,11 +52,23 @@ const Navbar = () => {
                 <div className='w-8 rounded-full'>
                   {
                       user? <>
-                      <li className='list-none'><Link to='/login'>Login</Link></li>
-                      </>:<>
-  
-                       
-                       <img className='rounded-full' src={userImg} alt="" />
+                      <div onClick={handleLogOut}>
+                      {
+                         user?. photoURL ? 
+                         <>
+                         <img  className='rounded-full -ml-10 ' src={user.photoURL} alt="" />
+                         </>
+                         :
+                         <>
+                         <img  className='rounded-full -ml-10 ' src={userImg} alt="" />
+                         </>
+                        
+                      }
+                      </div>
+                      </>
+                      :
+                      <>
+                       <li className='list-none text-xl -ml-10 font-semibold hover:text-[#570DF8]'><Link to='/login'>Login</Link></li>
                       </>
                   }
                 </div>
