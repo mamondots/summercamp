@@ -7,11 +7,13 @@ import Login from "../Pages/Login/Login";
 import Singup from "../Pages/Singup/Singup";
 import InstructorsPage from "../Pages/InstructorsPage/InstructorsPage";
 import ClassesPage from "../Pages/ClassesPage/ClassesPage";
+import Error from "../Error/Error";
   
 export  const router = createBrowserRouter([
     {
       path: "/",
       element:<Main></Main>,
+      errorElement:<Error></Error>,
       children:[
         {
             path:'/',
