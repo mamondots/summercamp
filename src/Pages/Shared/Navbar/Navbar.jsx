@@ -13,9 +13,9 @@ const Navbar = () => {
     }
 
     const Navbar = <>
-        <li className='text-lg font-medium'><a>Home</a></li>
-        <li className='text-lg font-medium'><a>Instructors</a></li>
-        <li className='text-lg font-medium'><a>Classes</a></li>
+        <Link to='/'><li className='text-lg font-medium'><a>Home</a></li></Link>
+        <Link to='/instructorspage'><li className='text-lg font-medium'><a>Instructors</a></li></Link>
+        <Link to='/classespage'><li className='text-lg font-medium'><a>Classes</a></li></Link>
         {
             user? 
             <>

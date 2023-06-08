@@ -3,13 +3,14 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-
+import { FaGooglePlusG } from 'react-icons/fa';
+//import usePasswordToggle from "../../Hooks/usePasswordToggle";
 
 const Singup = () => {
-
+   //const [InputType,Icon] = usePasswordToggle()
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-    const { createUser, updateUserProfile, loading } = useContext(AuthContext)
+    const { createUser, updateUserProfile, loading,signInWithGoogle } = useContext(AuthContext)
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -29,13 +30,20 @@ const Singup = () => {
                     })
             })
 
-
+          
 
 
         reset()
     };
 
-
+    const handleGoogleSingIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                const user = result.user
+                console.log(user)
+            })
+            .catch(err => console.log(err))
+    }
 
     return (
         <div className="navbar max-w-[2520px] mx-auto xl:px-20 md:px-10 px-4 pt-12 pb-12">
@@ -60,7 +68,7 @@ const Singup = () => {
                             {errors.email && <span className="p-2 text-red-500">email is required</span>}
                         </div>
                         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:space-x-4">
-                            <div className="form-control">
+                            <div className="form-control relative">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
@@ -70,6 +78,7 @@ const Singup = () => {
                                     maxLength: 20,
                                 })}
                                     name="password" placeholder="password" className="input input-bordered" />
+                                    <span className=" absolute right-4 top-12 font-semibold cursor-pointer text-sm mt-1">{}</span>
                                 {errors.password?.type === 'required' && <span className="p-2 text-red-500">password is required</span>}
                                 {errors.password?.type === 'minLength' && <span className="p-2 text-red-500">password has 6 caractar</span>}
                             </div>
@@ -93,6 +102,15 @@ const Singup = () => {
                         <div className="form-control mt-6">
 
                             <input className="btn btn-primary" type="submit" value="Sing Up" />
+                        </div>
+                        <div onClick={handleGoogleSingIn} className="flex justify-center text-center  items-center space-x-6 hover:text-red-500 cursor-pointer">
+                            <div>
+                            <p><FaGooglePlusG className="text-3xl"></FaGooglePlusG></p>
+                            
+                            </div>
+                            <div>
+                            <p>Continue with Google </p>
+                            </div>
                         </div>
                         <p className="text-center">Already Have Account <Link className="text-red-500" to='/login'>Login</Link></p>
                     </form>
