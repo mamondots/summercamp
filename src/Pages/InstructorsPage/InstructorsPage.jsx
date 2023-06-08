@@ -5,7 +5,7 @@ import InstructorsPageCard from "./InstructorsPageCard";
 const InstructorsPage = () => {
     const [instructors ,setInstructors] = useState([])
     useEffect(() =>{
-        fetch('Instructor.json')
+        fetch('http://localhost:5000/instructors')
         .then(res => res.json())
         .then(data => setInstructors(data))
     },[])
@@ -19,8 +19,8 @@ const InstructorsPage = () => {
             <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-6 sm:gap-2 gap-2 pt-12">
                  
             {
-                      instructors.map((instructor,index) =><InstructorsPageCard
-                      key={instructor.index}
+                      instructors.map(instructor =><InstructorsPageCard
+                      key={instructor._id}
                         instructor={instructor}
                       >
 

@@ -5,7 +5,7 @@ import ClassesPageCard from "./ClassesPageCard";
 const ClassesPage = () => {
     const [classItems,setClassItems] = useState([])
     useEffect(() =>{
-        fetch('classes.json')
+        fetch('http://localhost:5000/classes')
         .then(res => res.json())
         .then(data => {
             setClassItems(data)
@@ -21,8 +21,8 @@ const ClassesPage = () => {
             <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 lg:gap-8 md:gap-6 sm:gap-2 gap-2 pt-12">
                  
                      {
-                        classItems.map((classitem, index) => <ClassesPageCard
-                        key={classitem.index}
+                        classItems.map(classitem => <ClassesPageCard
+                        key={classitem._id}
                         classitem={classitem}
                         >
  
