@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaGooglePlusG } from 'react-icons/fa';
+import Swal from "sweetalert2";
 //import usePasswordToggle from "../../Hooks/usePasswordToggle";
 
 const Singup = () => {
@@ -23,9 +24,32 @@ const Singup = () => {
                 const creteUser = result.user
                 console.log(creteUser)
                 updateUserProfile(data.name, data.photoURL)
-                    .then(result => {
-                        const updateUser = result.user
-                        console.log(updateUser)
+                    .then( () => {
+                        const savaUser = {name: data.name, email:data.email}
+                        fetch('http://localhost:5000/users',{
+                            method:'POST',
+                            headers:{
+                                'content-type': 'application/json'
+                            },
+                            body:JSON.stringify(savaUser)
+                        })
+                        .then(res =>res.json())
+                        .then(data => {
+                            if(data.insertedId){
+                                reset()
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: 'Your work has been saved',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                  })
+                            }
+                        })
+
+                       
+
+                        
                         navigate(from, { replace: true })
                     })
             })
@@ -33,14 +57,30 @@ const Singup = () => {
           
 
 
-        reset()
+       
     };
 
     const handleGoogleSingIn = () => {
         signInWithGoogle()
             .then(result => {
-                const user = result.user
-                console.log(user)
+                const loggedUser = result.user
+                console.log(loggedUser)
+                const savaUser = {name:loggedUser.displayName, email:loggedUser.email}
+                        fetch('http://localhost:5000/users',{
+                            method:'POST',
+                            headers:{
+                                'content-type': 'application/json'
+                            },
+                            body:JSON.stringify(savaUser)
+                        })
+
+                        .then(res =>res.json())
+                        .then(() => {
+                            
+                                navigate(from, { replace: true })
+                            
+                        })
+
             })
             .catch(err => console.log(err))
     }

@@ -28,6 +28,9 @@ const Dasboard = () => {
                             <li className="text-xl font-semibold ">
                                 <Link to='/dasboard/seletedclasses'><a>My Seleted Classes</a></Link>
                             </li>
+                            <li className="text-xl font-semibold ">
+                                <Link to='/dasboard/manageuser'><a>Manage User</a></Link>
+                            </li>
                         </div>
                     </ul>
 

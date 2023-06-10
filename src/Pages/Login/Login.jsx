@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaGooglePlusG } from 'react-icons/fa';
 
@@ -8,11 +8,31 @@ import { FaGooglePlusG } from 'react-icons/fa';
 const Login = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { signIn, signInWithGoogle } = useContext(AuthContext)
+
+
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
+
     const onSubmit = data => {
         signIn(data.email, data.password)
             .then(result => {
                 const user = result.user
                 console.log(user)
+                const savaUser = {name:user.displayName, email:user.email}
+                fetch('http://localhost:5000/users',{
+                    method:'POST',
+                    headers:{
+                        'content-type': 'application/json'
+                    },
+                    body:JSON.stringify(savaUser)
+                })
+                .then(res =>res.json())
+                        .then(() => {
+                            
+                                navigate(from, { replace: true })
+                            
+                        })
             })
             .catch(error => {
                 console.error(error)

@@ -17,7 +17,7 @@ const Classes = () => {
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:gap-8 md:gap-6 sm:gap-2 pb-12">
                     {
-                       classInfo.map(item => <ClassCard
+                       classInfo.slice(0,6).map(item => <ClassCard
                        key={item._id}
                        item={item}
                        >

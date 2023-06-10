@@ -1,7 +1,10 @@
+
 import Swal from "sweetalert2";
 
 
+
 const AddClasses = () => {
+    
     const handleAddClass = event =>{
         event.preventDefault();
         const form = event.target
@@ -48,7 +51,7 @@ const AddClasses = () => {
                             <label className="label">
                                 <span className="label-text">Class Name</span>
                             </label>
-                            <input type="text"    name="name" placeholder="Class Name" className="input input-bordered" />
+                            <input type="text"  name="name" placeholder="Class Name" className="input input-bordered" />
                             
                         </div>
 
@@ -66,7 +69,7 @@ const AddClasses = () => {
                                     <span className="label-text">Instuctor Name</span>
                                 </label>
                                 <input type="text"
-                                    name="inname" placeholder="Instuctor Name" className="input input-bordered" />
+                                    name="inname" placeholder={name}className="input input-bordered" />
                             </div>
 
                             <div className="form-control">

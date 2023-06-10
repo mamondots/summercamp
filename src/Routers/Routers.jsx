@@ -12,6 +12,7 @@ import Dasboard from "../Layout/Dasboard";
 import AddClasses from "../Dasboard/AddClasses/AddClasses";
 import MyClasses from "../Dasboard/MyClasses/MyClasses";
 import SeletedClasses from "../Dasboard/SeletedClasses/SeletedClasses";
+import ManageUsers from "../Dasboard/ManageUsers/ManageUsers";
 
 
 export const router = createBrowserRouter([
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
           {
             path: '/dasboard/seletedclasses',
             element:<SeletedClasses></SeletedClasses>
+          },
+          {
+            path: '/dasboard/manageuser',
+            element:<ManageUsers></ManageUsers>
           }
         ]
       },
