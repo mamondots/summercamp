@@ -65,7 +65,8 @@ const Singup = () => {
             .then(result => {
                 const loggedUser = result.user
                 console.log(loggedUser)
-                const savaUser = {name:loggedUser.displayName, email:loggedUser.email}
+                const savaUser = {name:loggedUser.displayName, email:loggedUser.email, image:loggedUser.photoURL
+                }
                         fetch('http://localhost:5000/users',{
                             method:'POST',
                             headers:{

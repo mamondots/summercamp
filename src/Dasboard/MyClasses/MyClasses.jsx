@@ -16,6 +16,7 @@ const MyClasses = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
+             
                 fetch(`http://localhost:5000/classes/${item._id}`, {
                     method: 'DELETE'
                 })

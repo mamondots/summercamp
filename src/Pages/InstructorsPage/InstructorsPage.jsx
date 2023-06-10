@@ -1,14 +1,11 @@
-import { useEffect, useState } from "react";
+
+import useInstructor from "../../Hooks/useInstructor";
 import InstructorsPageCard from "./InstructorsPageCard";
 
 
 const InstructorsPage = () => {
-    const [instructors ,setInstructors] = useState([])
-    useEffect(() =>{
-        fetch('http://localhost:5000/instructors')
-        .then(res => res.json())
-        .then(data => setInstructors(data))
-    },[])
+    const [instructor] = useInstructor()
+    const popular = instructor.filter(item => item.role ==='instructor');
     return (
         <div className="max-w-[2520px] mx-auto xl:px-20 md:px-10 px-4 pt-28 pb-2 ">
             <div className="bg-[#570DF8] p-12">
@@ -19,7 +16,7 @@ const InstructorsPage = () => {
             <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-8 md:gap-6 sm:gap-2 gap-2 pt-12">
                  
             {
-                      instructors.map(instructor =><InstructorsPageCard
+                      popular.map(instructor =><InstructorsPageCard
                       key={instructor._id}
                         instructor={instructor}
                       >
