@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import img from '../../assets/images/pexels-rdne-stock-project-8034585.jpg'
 import { AuthContext } from '../../Providers/AuthProvider';
 import { stringify } from 'postcss';
 import Swal from 'sweetalert2';
@@ -53,7 +52,7 @@ const ClassesPageCard = ({ classitem }) => {
     return (
         <div>
             <div className="card card-compact bg-base-100 shadow-xl">
-                <figure><img src={img} alt="Shoes" /></figure>
+                <figure><img src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-2xl">{name}</h2>
                     <p className='text-xl font-semibold'>Available_Seats : {available_seats}</p>
