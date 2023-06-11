@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -131,7 +132,7 @@ const ManageClasses = () => {
                       }
                      </div>
 
-                      <button className="btn btn-ghost btn-xs">feedback</button>
+                      <Link to={`/dasboard/feedback/${item._id}`}><button className="btn btn-ghost btn-xs">feedback</button></Link>
                     </div>
 
 

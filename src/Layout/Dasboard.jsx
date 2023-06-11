@@ -29,6 +29,9 @@ const Dasboard = () => {
                                 <Link to='/dasboard/seletedclasses'><a>My Seleted Classes</a></Link>
                             </li>
                             <li className="text-xl font-semibold ">
+                                <Link to='/dasboard/enrollclass'><a>My enroll Classes</a></Link>
+                            </li>
+                            <li className="text-xl font-semibold ">
                                 <Link to='/dasboard/manageclasses'><a>Manage Classes</a></Link>
                             </li>
                             <li className="text-xl font-semibold ">

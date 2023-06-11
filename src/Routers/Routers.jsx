@@ -14,6 +14,10 @@ import MyClasses from "../Dasboard/MyClasses/MyClasses";
 import SeletedClasses from "../Dasboard/SeletedClasses/SeletedClasses";
 import ManageUsers from "../Dasboard/ManageUsers/ManageUsers";
 import ManageClasses from "../Dasboard/ManageClasses/ManageClasses";
+import Feedback from "../Dasboard/Feedback/Feedback";
+import SeeFeedback from "../Dasboard/SeeFeedback/SeeFeedback";
+import EnrollClass from "../Dasboard/EnrollClass/EnrollClass";
+import Payment from "../Dasboard/Payment/Payment";
 
 
 export const router = createBrowserRouter([
@@ -67,12 +71,30 @@ export const router = createBrowserRouter([
             element:<SeletedClasses></SeletedClasses>
           },
           {
+            path: '/dasboard/enrollclass',
+            element:<EnrollClass></EnrollClass>
+          },
+          {
+            path: '/dasboard/payment/:id',
+            element:<Payment></Payment>
+          },
+          {
             path: '/dasboard/manageclasses',
             element:<ManageClasses></ManageClasses>
           },
           {
             path: '/dasboard/manageuser',
             element:<ManageUsers></ManageUsers>
+          },
+          {
+            path: '/dasboard/feedback/:id',
+            element:<Feedback></Feedback>
+          },
+          {
+            path: '/dasboard/seefeedback/:id',
+            element:<SeeFeedback></SeeFeedback>,
+           // loader:({params}) => fetch(`http://localhost:5000/feedbacks/${params.id}`)
+            
           }
         ]
       },

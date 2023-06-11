@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import useMyClass from "../../Hooks/useMyClass";
+import { Link } from "react-router-dom";
 
 
 const MyClasses = () => {
@@ -61,7 +62,9 @@ const MyClasses = () => {
                                 </td>
                                 <td>Purple</td>
                                 <th>
+                                    <Link to={`/dasboard/seefeedback/${item._id}`}>
                                     <button className="btn btn-ghost btn-xs">Feadback</button>
+                                    </Link>
                                 </th>
                                 <th>
                                     <button className="btn btn-ghost btn-xs">Update</button>

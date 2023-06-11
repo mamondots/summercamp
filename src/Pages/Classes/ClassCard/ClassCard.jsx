@@ -63,6 +63,7 @@ const ClassCard = ({ item }) => {
                           <button onClick={() => handleAddClass(item)} className="btn btn-primary w-full">Add Class</button>
                         
                     </div>
+                    
                 </div>
             </div>
         </div>

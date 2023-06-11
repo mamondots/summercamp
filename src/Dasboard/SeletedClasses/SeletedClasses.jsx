@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import useSeletedClass from "../../Hooks/useSeletedClass";
+import { Link } from "react-router-dom";
 
 
 const SeletedClasses = () => {
@@ -85,7 +86,11 @@ const SeletedClasses = () => {
                                 <td>{row.available_seats}</td>
                                 <td>${row.price}</td>
                                 <th>
-                                    <button className="btn btn-ghost btn-xs">Payment</button>
+                                    <Link to={`/dasboard/payment/${row._id}`}>
+                                    <button className="btn btn-ghost btn-xs">
+                                        Payment
+                                    </button>
+                                    </Link>
                                     <button onClick={() => handleDelete(row)} className="btn btn-ghost btn-xs">Delete</button>
                                 </th>
                                 
