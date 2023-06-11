@@ -57,7 +57,7 @@ const MyClasses = () => {
                                     <div className="font-bold">{item.name}</div>
                                 </td>
                                 <td>
-                                    pending
+                                    {item.status}
                                 </td>
                                 <td>Purple</td>
                                 <th>
