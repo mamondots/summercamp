@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 
 
 const Dasboard = () => {
+
     return (
         <div className="pt-28 max-w-[2520px] mx-auto xl:px-20 md:px-10 px-4">
             <div className="drawer lg:drawer-open">
@@ -16,7 +17,18 @@ const Dasboard = () => {
                     <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
 
                         <div className="mt-20">
+                        <li className="text-xl font-semibold bg-red-400 ">
+                                <Link to='/dasboard/userhome'><a>User Home</a></Link>
+                            </li>
+
                             <li className="text-xl font-semibold ">
+                                <Link to='/dasboard/seletedclasses'><a>My Seleted Classes</a></Link>
+                            </li>
+                            <li className="text-xl font-semibold ">
+                                <Link to='/dasboard/enrollclass'><a>My enroll Classes</a></Link>
+                            </li>
+
+                            <li className="text-xl font-semibold bg-red-400 ">
                                 <Link><a>Instructor Home</a></Link>
                             </li>
                             <li className="text-xl font-semibold ">
@@ -25,18 +37,19 @@ const Dasboard = () => {
                             <li className="text-xl font-semibold ">
                                 <Link to='/dasboard/myclasses'><a>My Classes</a></Link>
                             </li>
-                            <li className="text-xl font-semibold ">
-                                <Link to='/dasboard/seletedclasses'><a>My Seleted Classes</a></Link>
+
+
+                            <li className="text-xl font-semibold bg-red-400 ">
+                                <Link to='/dasboard/adminhome'><a>Admin Home</a></Link>
                             </li>
-                            <li className="text-xl font-semibold ">
-                                <Link to='/dasboard/enrollclass'><a>My enroll Classes</a></Link>
-                            </li>
+
                             <li className="text-xl font-semibold ">
                                 <Link to='/dasboard/manageclasses'><a>Manage Classes</a></Link>
                             </li>
                             <li className="text-xl font-semibold ">
                                 <Link to='/dasboard/manageuser'><a>Manage User</a></Link>
                             </li>
+
                         </div>
                     </ul>
 
